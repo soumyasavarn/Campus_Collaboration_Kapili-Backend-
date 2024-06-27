@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useContext, useEffect } from "react";
 import userdataContext from "./userdataContext";
 import UserContext from "./userContext.jsx";
@@ -37,9 +38,11 @@ console.log(userdata)
     }, [currUser]); // Re-run effect when currUser changes
 
     return (
+        <>
         <userdataContext.Provider value={{ userdata, setuserData,setTrigger }}>
             {props.children}
         </userdataContext.Provider>
+        </>
     );
 }
 

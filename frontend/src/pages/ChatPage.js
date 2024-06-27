@@ -310,12 +310,16 @@ useEffect(() => {
     
   }, [userdata]);
 
-  useEffect(()=>{
-    if(divRef.current){
-      divRef.current?.lastElementChild?.scrollIntoView();
+  useEffect(() => {
+    if (divRef.current) {
+      const lastChild = divRef.current.lastElementChild;
+      if (lastChild) {
+        lastChild.scrollIntoView();
+      }
     }
-    console.log("global "+global)
-  },[chatList,globalChats,global]);
+    console.log("global " + global);
+  }, [chatList, globalChats, global]);
+  
 
   useEffect(() => {
     const fetchGlobalData = async () => {
