@@ -93,12 +93,12 @@ loginRouter.get('/explore',async (req, res) => {
         if(user.username==null){
             const encodedEmail = encodeURIComponent(user.email);
             const encodedFullName = encodeURIComponent(user.fullname);
-            res.redirect(`https://fontend-campus-collab-bz2u-3hw6eeyew-soumyasavarns-projects.vercel.app/createProfile/${encodedEmail}/${encodedFullName}`);
+            res.redirect(`https://fontend-campus-collab-h33gd08s2-soumyasavarns-projects.vercel.app/createProfile/${encodedEmail}/${encodedFullName}`);
             
         }
         else{
             const encodedUsername = encodeURIComponent(user.username);
-            res.redirect(`https://fontend-campus-collab-bz2u-3hw6eeyew-soumyasavarns-projects.vercel.app/sucesslogin/${encodedUsername}`);
+            res.redirect(`https://fontend-campus-collab-h33gd08s2-soumyasavarns-projects.vercel.app/sucesslogin/${encodedUsername}`);
         }
     } catch (error) {
         console.log(error);
@@ -165,11 +165,11 @@ loginRouter.get('/logout', (req, res) => {
                 return res.status(500).send("Failed to logout");
             }
             res.clearCookie('connect.sid', { path: '/' });
-            const logoutUrl = `https://login.microsoftonline.com/common/oauth2/v2.0/logout?post_logout_redirect_uri=${encodeURIComponent('https://fontend-campus-collab-bz2u-3hw6eeyew-soumyasavarns-projects.vercel.app/login')}`;
+            const logoutUrl = `https://login.microsoftonline.com/common/oauth2/v2.0/logout?post_logout_redirect_uri=${encodeURIComponent('https://fontend-campus-collab-h33gd08s2-soumyasavarns-projects.vercel.app/login')}`;
             res.redirect(logoutUrl);
         });
     } else {
-        const logoutUrl = `https://login.microsoftonline.com/common/oauth2/v2.0/logout?post_logout_redirect_uri=${encodeURIComponent('https://fontend-campus-collab-bz2u-3hw6eeyew-soumyasavarns-projects.vercel.app/login')}`;
+        const logoutUrl = `https://login.microsoftonline.com/common/oauth2/v2.0/logout?post_logout_redirect_uri=${encodeURIComponent('https://fontend-campus-collab-h33gd08s2-soumyasavarns-projects.vercel.app/login')}`;
         res.redirect(logoutUrl);
     }
 });
