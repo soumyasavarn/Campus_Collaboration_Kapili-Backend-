@@ -23,7 +23,7 @@ const server = http.createServer(app);
 // const io = socketIo(server);
 const io = new Server(server, {
     cors: {
-        origin: "https://fontend-campus-collab-bz2u.vercel.app",
+        origin: "https://fontend-campus-collab-bz2u-3hw6eeyew-soumyasavarns-projects.vercel.app",
         methods: ["GET", "POST"],
     },
 });
