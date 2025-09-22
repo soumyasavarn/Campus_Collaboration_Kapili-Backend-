@@ -28,9 +28,9 @@ let user;
 
 const msalConfig = {
     auth: {
-        clientId: '61e0bc4d-f666-44e7-8975-a323cb0ebfa7',
+        clientId: 'f33b06ab-53bf-49cf-b257-dc1188511391',
         authority: 'https://login.microsoftonline.com/850aa78d-94e1-4bc6-9cf3-8c11b530701c',
-        clientSecret: 'F6J8Q~tSsV4.LyzpsYOUnf2-WDwenXqkDFq6NcPY'
+        clientSecret: '61e0bc4d-f666-44e7-8975-a323cb0ebfa7'
     }
 };
 
